@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>wucux</title>
+        <link>http://www.wucux.com/</link>
+        <description>梦幻乡</description>
+        <item>
+            <title>嘻哈游记</title>
+            <link>http://www.wucux.com/index.php/home/index/showlist?id=1</link>
+            <description>嘻哈游记</description>
+        </item>
+        <item>
+            <title>绮罗香</title>
+            <link>http://www.wucux.com/index.php/home/index/showlist?id=3</link>
+            <description>绮罗香</description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,118 @@
+<section class="container">
+<div class="content-wrap">
+<div class="content">
+  <header class="article-header">
+	<h1 class="article-title"><a href="#" title="{$chapter_title}" >{$chapter_title}</a></h1>
+	<div class="article-meta"> <span class="item article-meta-time">
+	  <time class="time" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="发表时间:{$chapter_time}"><i class="glyphicon glyphicon-time"></i>{$chapter_time}</time>
+	  </span> <span class="item article-meta-source" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="来源：{$Think.const.WEBNAME}"><i class="glyphicon glyphicon-globe"></i> {$Think.const.WEBNAME}</span><span class="item article-meta-source" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="作者：{$chapter_writer}"><i class="glyphicon glyphicon-globe"></i> {$chapter_writer}</span> <span class="item article-meta-category" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="{$chapter_category}"><i class="glyphicon glyphicon-list"></i> <a href="#" title="{$chapter_category}" >{$chapter_category}</a></span> <span class="item article-meta-views" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="浏览量：{$chapter_visit}"><i class="glyphicon glyphicon-eye-open"></i> {$chapter_visit}</span> <span class="item article-meta-comment" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="评论量"><i class="glyphicon glyphicon-comment"></i>{$chapter_visitmsg}</span> </div>
+  </header>
+  <article class="article-content">
+	  {$chapter_text}
+  </article>
+  <div class="article-tags">标签：<a href="" rel="tag" >{$chapter_key}</a>
+	</div>
+  <div class="relates">
+	<div class="title">
+	  <h3>相关推荐</h3>
+	</div>
+	<ul>
+		<volist name="info6" id="v">
+	  		<li><a href="__CONTROLLER__/reading?id={$v['chapter_id']}" title="" >{$v['chapter_title']}</a></li>
+		</volist>
+	</ul>
+  </div>
+  <div class="title" id="comment">
+	<h3>评论</h3>
+  </div>
+  <div id="respond">
+		<form id="comment-form" name="comment-form" action="" method="POST">
+			<div class="comment">
+				<input name="" id="" class="form-control" size="22" placeholder="您的昵称（必填）" maxlength="15" autocomplete="off" tabindex="1" type="text">
+				<input name="" id="" class="form-control" size="22" placeholder="您的网址或邮箱（非必填）" maxlength="58" autocomplete="off" tabindex="2" type="text">
+				<div class="comment-box">
+					<textarea placeholder="您的评论或留言（必填）" name="comment-textarea" id="comment-textarea" cols="100%" rows="3" tabindex="3"></textarea>
+					<div class="comment-ctrl">
+						<div class="comment-prompt" style="display: none;"> <i class="fa fa-spin fa-circle-o-notch"></i> <span class="comment-prompt-text">评论正在提交中...请稍后</span> </div>
+						<div class="comment-success" style="display: none;"> <i class="fa fa-check"></i> <span class="comment-prompt-text">评论提交成功...</span> </div>
+						<button type="submit" name="comment-submit" id="comment-submit" tabindex="4">评论</button>
+					</div>
+				</div>
+			</div>
+		</form>
+
+	</div>
+  <div id="postcomments">
+	<ol id="comment_list" class="commentlist">
+	<li class="comment-content"><span class="comment-f">#2</span><div class="comment-main"><p><a class="address" href="#" rel="nofollow" target="_blank">木庄网络博客</a><span class="time">(2016/10/28 11:41:03)</span><br>不错的网站主题，看着相当舒服</p></div></li>
+	<li class="comment-content"><span class="comment-f">#1</span><div class="comment-main"><p><a class="address" href="#" rel="nofollow" target="_blank">木庄网络博客</a><span class="time">(2016/10/14 21:02:39)</span><br>博客做得好漂亮哦！</p></div></li></ol>
+  </div>
+</div>
+</div>
+	<aside class="sidebar">
+		<div class="fixed">
+			<div class="widget widget-tabs">
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#notice" aria-controls="notice" role="tab" data-toggle="tab" >统计信息</a></li>
+					<li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab" >联系站长</a></li>
+					<li role="presentation"><a href="/index.php{$__MODE__ }/Admin/manager/login" target="_blank" >管理员登陆</a></li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane contact active" id="notice">
+						<h2>日志总数:
+							{$total}篇
+						</h2>
+						<h2>欢迎访问本站</h2>
+						<!--<h2>访客总数:-->
+						<!--<span id="sitetime">88条 </span></h2>-->
+					</div>
+					<div role="tabpanel" class="tab-pane contact" id="contact">
+						<h2>QQ:
+							<a href="" target="_blank" rel="nofollow" data-toggle="tooltip" data-placement="bottom" title=""  data-original-title="未知">*********</a>
+						</h2>
+						<h2>Email:
+							<a href="mailto:mail@wucux.com?subject=Hello" target="_blank" data-toggle="tooltip" rel="nofollow" data-placement="bottom" title="mail@wucux.com"  data-original-title="#">mail@wucux.com</a></h2>
+					</div>
+				</div>
+			</div>
+			<div class="widget widget_search">
+				<form class="navbar-form" action="/Search" method="post">
+					<div class="input-group">
+						<input type="text" name="keyword" class="form-control" size="35" placeholder="请输入关键字" maxlength="15" autocomplete="off">
+						<span class="input-group-btn">
+		<button class="btn btn-default btn-search" name="search" type="submit">搜索</button>
+		</span> </div>
+				</form>
+			</div>
+		</div>
+		<div class="widget widget_hot">
+			<h3>最新评论</h3>
+			<volist name="info3" id="v3">
+				<ul>
+					<li>
+						<a title="{$v3['chapter_title']}" href="__CONTROLLER__/reading?id={$v3['chapter_id']}" ><span class="thumbnail">
+                    <img class="thumb" data-original="{$Think.const.HOME_PUBLIC_PATH}images/visiterimg.jpg" src="{$Think.const.HOME_PUBLIC_PATH}images/visiterimg.jpg" alt="{$v3['visitmsg_from']}"  style="display: block;"></span>
+							<span class="text">{$v3['visitmsg_text']}</span>
+							<span class="muted"><i class="glyphicon glyphicon-time"></i>{$v3['visitmsg_time']}</span><br/>
+							<span class="muted"><i class="glyphicon glyphicon-eye-open"></i>{$v3['visitmsg_user']}</span>
+						</a>
+					</li>
+				</ul>
+			</volist>
+		</div>
+		<div class="widget widget_sentence">
+			<a href="#" target="_blank" rel="nofollow" title="这里是广告位" >
+				<img style="width: 100%" src="{$Think.const.HOME_PUBLIC_PATH}images/ad1.jpg" alt="这里是广告位" ></a>
+		</div>
+		<div class="widget widget_sentence">
+			<a href="#" target="_blank" rel="nofollow" title="这里也是广告" >
+				<img style="width: 100%" src="{$Think.const.HOME_PUBLIC_PATH}images/ad.jpg" alt="这里也是广告位" ></a>
+		</div>
+		<div class="widget widget_sentence">
+			<h3>友情链接</h3>
+			<div class="widget-sentence-link">
+				<a href="http://www.wucux.com/" title="wucux主站" target="_blank" >wucux主站</a>&nbsp;&nbsp;&nbsp;
+			</div>
+		</div>
+	</aside>
+</section>

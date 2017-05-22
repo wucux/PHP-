@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta http-equiv="refresh" content="<?php echo $this->jumpTime ?>;url=<?php echo $this->jumpUrl ?>">
+<title>页面跳转中...</title>
+</head>
+
+<body>
+	<table>
+    	<h1> <?php echo "{$this->message}" ?> </h1>
+        <tr><td>页面将在<?php echo $this->jumpTime?>秒后跳回上一页</td></tr>
+        <tr><td>页面无法跳转<a href="<?php echo $this->jumpUrl ?>">请点击</a></td></tr>
+    </table>
+</body>
+</html>
